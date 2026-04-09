@@ -1,26 +1,77 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <title>Taskey - {{ pageTitle }}</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.min.css" integrity="sha512-2bBQCjcnw658Lho4nlXJcc6WkV/UxpE/sAokbXPxQNGqmNdQrWqtw26Ns9kFF/yG792pKR1Sx8/Y1Lf1XN4GKA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-              <a class="navbar-brand" href="/">Taskey</a>
-              <ul class="navbar-nav ">
-                <li class="nav-item"><a href="/about" class="nav-link">About</a></li>
-                <li class="nav-item"><a href="/tags" class="nav-link">Tags</a></li>
-                <li class="nav-item"><a href="/tasks" class="nav-link">Tasks</a></li>
-                <li class="nav-item"><a href="/projects" class="nav-link">Projects</a></li>
-              </ul>
-            </div>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Lukas Schuurman's Portfolio Website" />
+    <meta name="author" content="Lukas Schuurman">
+
+    <title>[{{ pageTitle }}] Lukas' Corner</title>
+
+    <link rel="icon" type="ïmage/x-icon" href="resources/favicon.png" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style>
+
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <header class="default-color-theme">
+        <h1>Lukas' Corner</h1>
+    </header>
+
+    <div class="content{% if not authorshipTheme %} default-color-theme"{% else %}" id="authorship-theme"{% endif %}>
+        <nav>
+            <h2>NAVIGATION</h2>
+            <a {% if pageTitle === 'HOME' %}class="current-page"{% endif %} href="/">HOME</a>
+            <a {% if pageTitle === 'PROFILE' %}class="current-page"{% endif %} href="/profile">PROFILE</a>
+            <a {% if pageTitle === 'DASHBOARD' %}class="current-page"{% endif %} href="/dashboard">DASHBOARD</a>
+            <a {% if pageTitle === 'BLOG' %}class="current-page"{% endif %} href="/blog">BLOG</a>
+            <a {% if pageTitle === 'FAQ' %}class="current-page"{% endif %} href="/faq">FAQ</a>
         </nav>
-        <div class="container mt-5">
+
+        <div class="nav_separator"></div>
+
+        <main>
             {% block content %}{% endblock %}
-        </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.min.js" integrity="sha512-nKXmKvJyiGQy343jatQlzDprflyB5c+tKCzGP3Uq67v+lmzfnZUi/ZT+fc6ITZfSC5HhaBKUIvr/nTLCV+7F+Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    </body>
+        </main>
+
+        <footer>
+            <p style="position: relative; top: 50px;">programming and layout by Lukas Schuurman</p>
+            <figure>
+                <img src="resources/Pixel Art Westen Fry.gif" alt="CAMPFIRE IMAGE">
+            </figure>
+            <a {% if pageTitle === 'AUTHORSHIP' %}class="current-page"{% endif %} style="position: relative; top: -15px;" href="/authorship">assets used</a>
+        </footer>
+    </div>
+
+    <aside class="default-color-theme">
+        <h2>Related</h2>
+        <ul class="compact-list">
+            <li>
+                <a href="https://oer.hz.nl/" target="_blank">HZ HBO-ICT Course and Examination Regulations
+                    &lpar;CER&rpar;</a>
+            </li>
+            <li>
+                <a href="https://oer.hz.nl/93eee6aa-2bc1-454c-a56a-f8b56c62ba9f" target="_blank">HZ HBO-ICT
+                    Implementation Regulations &lpar;IR&rpar; 2025-2026</a>
+            </li>
+            <li>
+                <a href="https://learn.hz.nl/" target="_blank">HZ Learn Environment</a>
+            </li>
+            <li>
+                <a href="https://hz.osiris-student.nl/voortgang" target="_blank">HZ Study Progress Page</a>
+            </li>
+            <li>
+                <a href="https://github.com/HZ-HBO-ICT" target="_blank">HZ HBO-ICT GitHub Environment</a>
+            </li>
+        </ul>
+    </aside>
+
+</div>
+</body>
+
 </html>

@@ -1,0 +1,345 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: Fredoka;
+    src: url(fonts/FredokaOne-Regular.otf) format("opentype")
+}
+
+@font-face {
+    font-family: InterVariable;
+    src: url(fonts/InterVariable.ttf) format("truetype")
+}
+
+.default-color-theme {
+    color: #e8fffc;
+    background-color: hsla(209, 20%, 29%, 0.8);
+}
+
+#authorship-theme {
+    color: #e8fffc;
+    background-color: rgb(34, 32, 52, 0.8);
+}
+
+body {
+    background-image: url('resources/sr5z6b0fd3d84caws3.gif');
+    image-rendering: pixelated;
+    background-size: 50%;
+    background-attachment: fixed;
+}
+
+nav {
+    text-align: center;
+    font-size: 30px;
+    padding-top: 20px;
+}
+
+nav > h2 {
+    line-height: 0;
+}
+
+a {
+    color: #ffb999;
+}
+
+footer {
+    background-image: linear-gradient(0deg, rgb(34, 32, 52) 95%, rgba(59, 74, 89, 0));
+    text-align: center;
+    font-family: 'Trebuchet MS', sans-serif;
+    font-size: 15px;
+}
+
+.nav_separator {
+    background-color: #e8fffc;
+    height: 5px;
+    margin: 40px 20px;
+    border-radius: 20px;
+}
+
+.readable-text > h2 {
+    font-family: 'Fredoka', 'Intervariable', 'sans-serif';
+    text-align: center;
+    font-size: 50px;
+}
+
+.current-page {
+    color: #feeaed;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.container>.content {
+    margin: 10px auto;
+    width: 1200px;
+    font-family: 'Fredoka', 'sans-serif';
+    font-size: 21px;
+    text-align: justify;
+}
+
+.container>header {
+    flex: 0 0 250px;
+    font-family: "Trebuchet MS", sans-serif;
+    margin: 10px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 10px;
+    height: 60px;
+    align-self: flex-start;
+}
+
+.container>aside {
+    flex: 0 0 250px;
+    font-family: "Trebuchet MS", sans-serif;
+    margin: 10px;
+    font-size: 15px;
+    line-height: 10px;
+    text-indent: 10px;
+    align-self: flex-end;
+}
+
+.flexed-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: start;
+    gap: 10px;
+}
+
+.compact-list {
+    list-style-type: square;
+    padding-left: 25px;
+    line-height: 18px;
+    text-indent: 0;
+    font-size: 15px;
+}
+
+.compact-list>li+li {
+    margin-top: 5px;
+}
+
+.authorship-menu {
+    line-height: 10px;
+    text-indent: 20px;
+}
+
+.enclosed-authorship-figure {
+    padding-top: 20px;
+    padding-right: 20px;
+    border: 10px outset #ffcea7;
+    width: fit-content;
+}
+
+.enclosed-authorship-figure img {
+    height: auto;
+    max-width: 50%;
+}
+
+.enclosed-authorship-figure > p {
+    line-height: 30px;
+}
+
+.readable-text {
+    font-family: 'InterVariable', 'Trebuchet MS', 'sans-serif';
+    font-size: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+.text-acc-figure {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.text-acc-figure>div {
+    flex: 50%;
+}
+
+.captioned-figure {
+    border: 2px solid #bbcad9;
+}
+
+.captioned-figure img, .captioned-figure video {
+    width: 100%;
+    display: block;
+}
+
+.captioned-figure>div {
+    height: 2px;
+    background-color: #bbcad9;
+}
+
+.captioned-figure>figcaption { 
+    padding: 2px; 
+}
+
+/* CSS used in dashboard.html to structure and style the Study Overview */
+
+.study-progress-bars {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.study-progress-bars * {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.progress-title {
+    background-color: purple;
+    font-family: 'Fredoka', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 0;
+    padding: 10px;
+    border: 4px solid white;
+}
+
+.nbsa-counter {
+    background-color: black;
+    width: fit-content;
+    margin: 0;
+    padding: 0 10px;
+    position: relative;
+    top: -30%;
+    left: 5%;
+    font-size: 50px;
+    font-family: 'Fredoka', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: 2px solid white;
+}
+
+.pbsa-counter {
+    background-color: black;
+    width: fit-content;
+    margin: 0;
+    padding: 20px 8px;
+    position: relative;
+    top: -28%;
+    left: 45%;
+    font-size: 40px;
+    font-family: 'Fredoka', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: 2px solid white;
+}
+
+.placed-upwards {
+    position: relative;
+    top: -7rem;
+    font-size: 16px;
+    margin-bottom: -80px;
+}
+
+.placed-upwards2 {
+    position: relative;
+    top: -2rem;
+    font-size: 16px;
+}
+
+.obtained {background-color: ivory; color: #4353A2;}
+.unobtained {background-color: #dc143c; color: #FFFFFA}
+.taken {background-color: rgb(164, 252, 255); color: #4C5769;}
+.untaken {background-color: #6a5acd; color:#FFFFFA}
+.toberetaken {background-color: hsl(22, 83%, 47%); color: #FFFFFA}
+
+/* CSS for the Dashboard legend. */
+
+.legend-section {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    place-items: center;
+}
+
+.legend-section p {
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+.ec-legend {
+    grid-column: 2 / 4;
+}
+
+.test-legend {
+    grid-column: 5 / 8;
+}
+
+.ec-legend, .test-legend {
+    display: flex;
+}
+
+.legend-color {
+    height: 20px;
+    width: 20px;
+    margin-left: 20px;
+}
+
+/* CSS for the Dashboard overview. */
+
+.overview {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+
+    background-color: #dda0dd;
+    color: #003D03;
+}
+
+.overview > .quarter {
+    grid-column: 1 / -1;
+
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+
+    background-color: #afeeee;
+    color: #3D561A;
+}
+
+.overview > .quarter > .course {
+    grid-column: 2 / -1;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+}
+
+.overview > .quarter > .course > .test {
+    grid-column: 3 / -1;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.overview > * {
+    border: 1px solid black;
+    margin: 0;
+}
+
+/* CSS used in blog.html to display blog posts */
+
+.blog-list > * {
+    border: 2px solid ivory;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.blog-list > * + * {
+    margin-top: 5px;
+}
+
+.blog-post > * {
+    margin: 5px;
+}
+
+.blog-excerpt > a {
+    color: #e8fffc;
+}
+
+.post-date {
+    color: pink;
+    opacity: 0.75;
+    font-style: italic;
+}

@@ -1,8 +1,66 @@
 {% extends "partials/base.html.twig" %}
 
-{% set pageTitle = "Home" %}
+{% set pageTitle = "HOME" %}
 
 {% block content %}
-    <h1>Home</h1>
-    <p>Welcome to Taskey!</p>
+    <section class="readable-text">
+        <h2>HOME</h2>
+        <div class="text-acc-figure">
+            <div>
+                <h3>Why hast thou picked the HZ HBO-ICT programme?</h3>
+                <p>I enjoy stimulating challenges. The ICT-field offers these. It is, to me, just the right
+                    blend of research and application. Ever since I was young, I've been able to enter 6+
+                    hour flow states where I work continuously, whether that be something creative,
+                    something technical, or studying for school. These flow states assisted me in building
+                    this website. As for why I am the way I am, I suppose it's just a combination between
+                    genetics and environment that eventually made me the person I am today. At a base level,
+                    this is simply what my being is attracted to, deeper than that I cannot go. Even one's
+                    degree of self-determination and metacognition is predetermined.</p>
+                <h3>Former experience and proof for my claims.</h3>
+                <p>The first piece of proof is, no doubt, this website. Some features took me hours to
+                    implement because my brain enjoys overcomplicating even the most basic problems. I
+                    learnt HTML and CSS using <a href="https://www.w3schools.com/"
+                                                 target="_blank">W3Schools</a>, <a href="https://developer.mozilla.org/en-US/" target="_blank">MDN</a> as
+                    well as <a href="https://www.freecodecamp.org/">FreeCodeCamp</a>. In addition, unrelated to this
+                    website, I've build simple applications for forward-projected investment returns as
+                    well as math problems in Python, and am currently working through <a
+                            href="https://www.learncpp.com" target="_blank">LearnCPP</a> in my free time.
+                    One thing I enjoy about C++ is that incentivizes learning about memory allocation,
+                    as well as basic computer science to understand how the code you write is translated
+                    into machine code, allowing you more clarity on topics like memory managment and
+                    optimization, wheras a higher-level programming language like Python doesn't require
+                    you to do that.</p>
+                <h3>What I'm hoping to get out of this course</h3>
+                <ul>
+                    <li>Time management. Slow learner and chronic slacker here. I would do well with
+                        structure and
+                        deadlines.</li>
+                    <li>Figuring out what employers want from me. How can I make myself useful?</li>
+                    <li>Expose myself to stressors that reveal my strengths and weak points. <i>"Software
+                            engineer,
+                            know thyself!"</i></li>
+                </ul>
+            </div>
+            <div>
+                <figure class="captioned-figure">
+                    <img src="resources/20250909_180807(1).jpg" alt="PHOTO OF DESK">
+                    <div></div>
+                    <figcaption>Where the magic happens.</figcaption>
+                </figure>
+                <figure class="captioned-figure">
+                    <video controls>
+                        <source src="resources/20250909_184526.mp4" type="video/mp4">
+                        VIDEO OF ME BEING UNFUNNY AND DUMB
+                    </video>
+                    <div></div>
+                    <figcaption>Working the magic.</figcaption>
+                </figure>
+                <figure class="captioned-figure">
+                    <a href="https://www.hz.nl" target="_blank">
+                        <img src="resources/fnnuohi0u7h71.jpg" alt="PHOTO OF DESK">
+                    </a>
+                </figure>
+            </div>
+        </div>
+    </section>
 {% endblock %}

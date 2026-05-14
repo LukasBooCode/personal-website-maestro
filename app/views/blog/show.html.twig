@@ -3,7 +3,7 @@
 {% set postTitle = ('Blog #' ~ (post.id) ~ ': "' ~ (post.title) ~ '"')%}
 {% set postDate = "published at " ~ (post.datePublished | date('H:i')) ~ " on " ~ (post.datePublished | date('Y-m-d'))%}
 
-{% set pageTitle = (post.title|capitalize) %}
+{% set pageTitle = (post.title) %}
 
 {% block blogContent %}
     {{ post.content }}

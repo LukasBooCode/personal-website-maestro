@@ -24,6 +24,6 @@ class RouteProvider implements RouteProviderInterface
 
         $blogController = $container->get(BlogController::class);
         $router->addRoute('GET', '/blog', [$blogController, "index"]);
-        $router->addRoute('GET', '/blog/(?<postTitle>[A-z]+)', [$blogController, "show"]);
+        $router->addRoute('GET', '/blog/(?<id>\d+)', [$blogController, "show"]);
     }
 }

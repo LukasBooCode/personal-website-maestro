@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Repositories\BlogRepositoryInterface;
 use Framework\Request;
 use Framework\Response;
 use Framework\ResponseFactory;
@@ -9,21 +10,30 @@ use Framework\ResponseFactory;
 class BlogController
 {
     private ResponseFactory $responseFactory;
-    public function __construct(ResponseFactory $responseFactory)
+    private BlogRepositoryInterface $blogRepository;
+    public function __construct(ResponseFactory $responseFactory, BlogRepositoryInterface $blogRepository)
     {
         $this->responseFactory = $responseFactory;
+        $this->blogRepository = $blogRepository;
     }
 
     public function index(): Response
     {
-        return $this->responseFactory->view('blog/index.html.twig');
+        $blogs = $this->blogRepository->all();
+
+        return $this->responseFactory->view('blog/index.html.twig', [
+            'blogs' => $blogs
+        ]);
     }
     public function show(Request $request): Response
     {
-        $postTitle = $request->get('postTitle');
-        if (!$postTitle) {
+        $id = (int)$request->get('id');
+        $post = $this->blogRepository->find($id);
+        if (!$post) {
             return $this->responseFactory->notFound();
         }
-        return $this->responseFactory->view('blog/' . $postTitle . '.html.twig');
+        return $this->responseFactory->view('blog/show.html.twig', [
+            'post' => $post
+        ]);
     }
 }
